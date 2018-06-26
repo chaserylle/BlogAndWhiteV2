@@ -18,6 +18,8 @@ Route::get('/about', 'WelcomeController@test');
 Route::get('/', 'PostController@index');
 Route::get('/manage_posts', 'PostController@manage_posts');
 
+Route::get('/create_blogs', 'AuthorController@index');
+
 /**Route::controllers([
 	'auth' => 'Auth\AuthController',11111
 	'password' => 'Auth\PasswordController',
