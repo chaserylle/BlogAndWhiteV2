@@ -18,7 +18,11 @@
 					<td><?php echo e($post->title); ?></td>
 					<td> <?php echo e($post->username); ?> </td>
 					<td><?php echo e($post->date_published); ?></td>
-					<td> <?php echo e($post->status); ?> (button) </td>
+						<?php if($post->status == '0'): ?>
+							<td> <input class="btn btn-outline-dark" type="submit" name="enable" value="publish"> </td>
+						<?php else: ?>
+							<td> <input class="btn btn-outline-danger" type="submit" name="disable" value="unpublish"> </td>
+						<?php endif; ?>
 				</tr>
 			<?php endforeach; ?>
 		</table>
