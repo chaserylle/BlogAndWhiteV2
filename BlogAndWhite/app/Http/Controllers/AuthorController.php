@@ -33,8 +33,4 @@ class AuthorController extends Controller {
 		return view('manageAccounts', $data);
 	}
 
-	public static function admin_home(){
-		return view('adminHome');
-	}
-
 }

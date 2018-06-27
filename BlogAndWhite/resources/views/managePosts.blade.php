@@ -19,11 +19,14 @@
 					<td>{{ $post->title }}</td>
 					<td> {{ $post->username}} </td>
 					<td>{{ $post->date_published }}</td>
-						@if ($post->status == '0')
-							<td> <input class="btn btn-outline-dark" type="submit" name="enable" value="publish"> </td>
-						@else
-							<td> <input class="btn btn-outline-danger" type="submit" name="disable" value="unpublish"> </td>
-						@endif
+						<form action="publish.php" method="get">
+							<input type="hidden" name="postId" value="{!! $post->post_id !!}">
+							@if ($post->status == '0')
+								<td> <input class="btn btn-outline-dark" type="submit" name="enable" value="publish"> </td>
+							@else
+								<td> <input class="btn btn-outline-danger" type="submit" name="disable" value="unpublish" formaction="unpublish.php"> </td>
+							@endif
+						</form>
 				</tr>
 			@endforeach
 		</table>

@@ -5,31 +5,40 @@
 <div style="margin-top: 10%;" class="wrapper container col col-sm-10 card-group">
   <div class="card">
     <div class="card-body">
-      <center><h5 class="card-title"><a href="blogs.php">Blogs</a></h5></center>
+      <center><h5 class="card-title"><a href='<?php echo url('/admin/manage_posts');; ?>'>Blogs</a></h5></center>
       <p class="card-text">
-      	Published blogs: 2
+      	Published blogs: <?php echo e($published_posts); ?>
+
       </p>
       <p class="card-text">
-      	Unpublished blogs: 4
-      </p>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card-body">
-      <center><h5 class="card-title"><a href="authors.php">Author Accounts</a></h5></center>
-      <p class="card-text">
-      	Enabled accounts: 5
-      </p>
-      <p class="card-text">
-      	Disabled Accounts: 3
+      	Unpublished blogs: <?php echo e($unpublished_posts); ?>
+
       </p>
     </div>
   </div>
   <div class="card">
     <div class="card-body">
-      <center><h5 class="card-title"><a href="comments.php">Comments</a></h5></center>
+      <center><h5 class="card-title"><a href='<?php echo url('/admin/manage_accounts');; ?>'>Author Accounts</a></h5></center>
       <p class="card-text">
-      	Comments: 5
+      	Enabled accounts: <?php echo e($enabled_accounts); ?>
+
+      </p>
+      <p class="card-text">
+      	Disabled Accounts: <?php echo e($disabled_accounts); ?>
+
+      </p>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-body">
+      <center><h5 class="card-title"><a href='<?php echo url('/admin/manage_comments');; ?>'>Comments</a></h5></center>
+      <p class="card-text">
+      	Displayed Comments: <?php echo e($displayed_comments); ?>
+
+      </p>
+      <p class="card-text">
+      	Hidden Comments: <?php echo e($hidden_comments); ?>
+
       </p>
     </div>
   </div>

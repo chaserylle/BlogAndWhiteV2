@@ -21,11 +21,14 @@
 					<td> {{ $comment->title}} </td>
 					<td>{{ $comment->comment_content }}</td>
 					<td>{{ $comment->date_commented }}</td>
-						@if ($comment->status == '0')
-							<td> <input class="btn btn-outline-dark" type="submit" name="show" value="show"> </td>
-						@else
-							<td> <input class="btn btn-outline-danger" type="submit" name="hide" value="hide"> </td>
-						@endif
+						<form action="#" method="get">
+							<input type="hidden" name="commentId" value="{!! $comment->comment_id !!}">
+							@if ($comment->status == '0')
+								<td> <input class="btn btn-outline-dark" type="submit" name="show" value="show"> </td>
+							@else
+								<td> <input class="btn btn-outline-danger" type="submit" name="hide" value="hide" formaction="#"> </td>
+							@endif
+						</form>
 				</tr>
 			@endforeach
 		</table>

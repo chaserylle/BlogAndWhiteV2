@@ -7,8 +7,21 @@ class TblComments extends Model {
 	public static function get_comments(){
 		$query = \DB::table('comments AS c')
 				->leftJoin('posts AS p', 'p.post_id', '=', 'c.post_id')
-				->select('c.name', 'p.title', 'c.comment_content', 'c.date_commented', 'c.status')
 				->get();
+		return $query;
+	}
+
+	public static function get_displayed_comments(){
+		$query = \DB::table('comments AS c')
+				->where('status','=','1')
+				->count();
+		return $query;
+	}
+
+	public static function get_hidden_comments(){
+		$query = \DB::table('comments AS c')
+				->where('status','=','0')
+				->count();
 		return $query;
 	}
 }

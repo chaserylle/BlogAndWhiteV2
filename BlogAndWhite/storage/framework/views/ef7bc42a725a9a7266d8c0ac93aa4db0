@@ -16,11 +16,14 @@
 				<tr>
 					<td><?php echo e($account->username); ?></td>
 					<td> <?php echo e($account->date_registered); ?> </td>
+						<form action="#" method="get">
+							<input type="hidden" name="accId" value="<?php echo $account->acc_id; ?>">
 						<?php if($account->status == '0'): ?>
-							<td> <input class="btn btn-outline-dark" type="submit" name="enable" value="enable"> </td>
+							<td> <input class="btn btn-outline-dark" type="submit" name="enable" value="publish"> </td>
 						<?php else: ?>
-							<td> <input class="btn btn-outline-danger" type="submit" name="disable" value="disable"> </td>
+							<td> <input class="btn btn-outline-danger" type="submit" name="disable" value="unpublish" formaction="unpublish.php"> </td>
 						<?php endif; ?>
+						</form>
 				</tr>
 			<?php endforeach; ?>
 		</table>
