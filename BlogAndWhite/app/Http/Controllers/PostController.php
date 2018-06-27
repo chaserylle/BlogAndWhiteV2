@@ -6,7 +6,7 @@ class PostController extends Controller {
 	
 	public function index(){
 		$data=[];
-		$data['posts']=TblPosts::get_posts();
+		$data['posts']=TblPosts::posts_info();
 		return view('home', $data);
 	}
 

@@ -8,7 +8,7 @@ class TblAccounts extends Model {
 	{
 		$query = \DB::table('accounts AS a')
 				->where('acc_id', '<=', '5')
-				->get();
+				//->get();
 		return $query;
 	}	
 }
