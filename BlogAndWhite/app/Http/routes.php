@@ -16,9 +16,10 @@ Route::get('/accounts', 'AccountController@index');
 Route::get('home', 'HomeController@index');
 Route::get('/about', 'WelcomeController@test');
 Route::get('/', 'PostController@index');
-Route::get('/manage_posts', 'PostController@manage_posts');
-Route::get('/manage_accounts', 'AuthorController@manage_accounts');
-Route::get('/manage_comments', 'CommentsController@index');
+Route::get('/admin', 'AdminController@index');
+Route::get('/admin/manage_posts', 'PostController@manage_posts');
+Route::get('/admin/manage_accounts', 'AuthorController@manage_accounts');
+Route::get('/admin/manage_comments', 'CommentsController@index');
 Route::get('/create_blogs', 'AuthorController@index');
 
 /**Route::controllers([

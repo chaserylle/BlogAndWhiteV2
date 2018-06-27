@@ -17,11 +17,14 @@
 				<tr>
 					<td>{{ $account->username }}</td>
 					<td> {{ $account->date_registered }} </td>
-						@if ($account->status == '0')
-							<td> <input class="btn btn-outline-dark" type="submit" name="enable" value="enable"> </td>
-						@else
-							<td> <input class="btn btn-outline-danger" type="submit" name="disable" value="disable"> </td>
-						@endif
+						<form action="#" method="get">
+							<input type="hidden" name="accId" value="{!! $account->acc_id !!}">
+							@if ($account->status == '0')
+								<td> <input class="btn btn-outline-dark" type="submit" name="enable" value="publish"> </td>
+							@else
+								<td> <input class="btn btn-outline-danger" type="submit" name="disable" value="unpublish" formaction="#"> </td>
+							@endif
+						</form>
 				</tr>
 			@endforeach
 		</table>

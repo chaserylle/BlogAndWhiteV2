@@ -18,11 +18,14 @@
 					<td><?php echo e($post->title); ?></td>
 					<td> <?php echo e($post->username); ?> </td>
 					<td><?php echo e($post->date_published); ?></td>
+						<form action="publish.php" method="get">
+							<input type="hidden" name="postId" value="<?php echo $post->post_id; ?>">
 						<?php if($post->status == '0'): ?>
 							<td> <input class="btn btn-outline-dark" type="submit" name="enable" value="publish"> </td>
 						<?php else: ?>
-							<td> <input class="btn btn-outline-danger" type="submit" name="disable" value="unpublish"> </td>
+							<td> <input class="btn btn-outline-danger" type="submit" name="disable" value="unpublish" formaction="unpublish.php"> </td>
 						<?php endif; ?>
+						</form>
 				</tr>
 			<?php endforeach; ?>
 		</table>
