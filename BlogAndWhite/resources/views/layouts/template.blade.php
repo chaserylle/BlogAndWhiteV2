@@ -16,11 +16,13 @@
     @section('navbar')
      <div class="navig"> 
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
-          <a class="navbar-brand" href="../index.php">Blog & White</a>
+          <a class="navbar-brand" href="# ">Blog & White</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarText">
+            
+            <!-- Navigation for Author accounts -->
             <ul class="navbar-nav mr-auto">
               <li class="nav-item">
                 <a class="nav-link" href="../author/author_blogs.php"> My Blogs <span class="sr-only">(current)</span></a>
@@ -29,6 +31,27 @@
                 <a class="nav-link" href="../author/create_blogs.php"> Write a Blog <span class="sr-only">(current)</span></a>
               </li>
             </ul>
+            
+            <!-- Navigation for Admin -->
+            <!-- <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="../author/author_blogs.php"> Posts <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../author/author_blogs.php"> Accounts <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../author/author_blogs.php"> Comments <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../author/author_blogs.php"> My Blogs <span class="sr-only"></span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../author/create_blogs.php"> Write a Blog <span class="sr-only"></span></a>
+              </li>
+            </ul> -->
+
+
             <span class="navbar-text">
               logged in as user
             </span>
