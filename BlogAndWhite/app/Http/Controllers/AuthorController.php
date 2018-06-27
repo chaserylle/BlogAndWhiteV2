@@ -1,6 +1,7 @@
 <?php 
 namespace App\Http\Controllers;
 use App\Models\TblPosts;
+use App\Models\TblAccounts;
 
 class AuthorController extends Controller {
 	
@@ -24,6 +25,12 @@ class AuthorController extends Controller {
 	public static function posts_info(){
 		$posts=TblPosts::posts_info();
 		echo(json_encode($posts));
+	}
+
+	public static function manage_accounts(){
+		$data=[];
+		$data['accounts']=TblAccounts::get_accounts();
+		return view('manageAccounts', $data);
 	}
 
 }

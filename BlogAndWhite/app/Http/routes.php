@@ -17,6 +17,7 @@ Route::get('home', 'HomeController@index');
 Route::get('/about', 'WelcomeController@test');
 Route::get('/', 'PostController@index');
 Route::get('/manage_posts', 'PostController@manage_posts');
+Route::get('/manage_accounts', 'AuthorController@manage_accounts');
 Route::get('/manage_comments', 'CommentsController@index');
 Route::get('/create_blogs', 'AuthorController@index');
 
